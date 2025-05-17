@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 namespace DiceRoller
 {
     class Game{
-        public int VitoriaSequencia { get; private set; }
-        public int TotalVitorias { get; private set; }
-        public int UltimaSomaDosDados { get; private set; }
+        public int VitoriaSequencia;
+        public int TotalVitorias;
+        public int UltimaSomaDosDados;
+        public int LimiteVitorias;
 
         public Game()
         {
             VitoriaSequencia = 0;
             TotalVitorias = 0;
             UltimaSomaDosDados = 0;
+            LimiteVitorias = 0;
         }
 
-        public bool CheckResult(int dado1, int dado2, int escolha)
+        public bool CheckResultado(int dado1, int dado2, int escolha)
         {
             UltimaSomaDosDados = dado1 + dado2;
 
@@ -34,6 +36,20 @@ namespace DiceRoller
                 return false;
             }
         }
+
+        public bool LimiteCheck(){
+            LimiteVitorias = 25;
+            if(TotalVitorias == 25)
+            {
+                    
+            }
+            else
+            {
+
+            }
+        }
+
+        //Adicionar um limite de vitórias (25 vitórias)
 
     }
 }

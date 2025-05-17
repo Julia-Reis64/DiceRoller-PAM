@@ -28,7 +28,7 @@ namespace DiceRoller
             if (EscolhaJogador.SelectedIndex != -1)
             {
                 int escolha = EscolhaJogador.SelectedIndex + 2; // Soma varia de 2 a 12
-                bool venceu = jogo.CheckResult(resultado1, resultado2, escolha);
+                bool venceu = jogo.CheckResultado(resultado1, resultado2, escolha);
 
                 SomaDadosLabel.Text = $"Soma dos dados: {jogo.UltimaSomaDosDados}";
 

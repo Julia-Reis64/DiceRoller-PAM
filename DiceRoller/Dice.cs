@@ -9,8 +9,8 @@ namespace DiceRoller
     public class Dice{
         private static Random random = new Random();
 
-        public int FaceParaCima { get; private set; }
-        public int FaceParaBaixo { get; private set; }
+        public int FaceParaCima;
+        public int FaceParaBaixo;
 
         public Dice(){
             FaceParaCima = 1; // Inicializará com um valor padrão (1)
