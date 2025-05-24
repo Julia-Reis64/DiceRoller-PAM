@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui.Controls;
+﻿using DiceRoller.Models;
+using Microsoft.Maui.Controls;
 
 namespace DiceRoller
 {
@@ -21,8 +22,8 @@ namespace DiceRoller
             int resultado2 = dice2.Roll();
 
             // Atualiza as imagens dos dados conforme o resultado
-            Dado1Imagem.Source = $"dado{resultado1}.png";
-            Dado2Imagem.Source = $"dado{resultado2}.png";
+            ImagemDado1.Source = $"dado{resultado1}.png";
+            ImagemDado2.Source = $"dado{resultado2}.png";
 
             // Verifica se o jogador escolheu uma soma
             if (EscolhaJogador.SelectedIndex != -1)

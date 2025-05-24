@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiceRoller
+namespace DiceRoller.Models
 {
     class Game{
         public int VitoriaSequencia;
@@ -36,20 +36,21 @@ namespace DiceRoller
                 return false;
             }
         }
-
-        public bool LimiteCheck(){
+        //Adicionar um limite de vitórias (25 vitórias)
+        public bool LimiteCheck(Dice dice){
             LimiteVitorias = 25;
-            if(TotalVitorias == 25)
+            if(TotalVitorias >= 25)
             {
-                    
+                return true;
+                
             }
             else
             {
-
+                return false;
             }
         }
 
-        //Adicionar um limite de vitórias (25 vitórias)
+        
 
     }
 }

@@ -6,12 +6,12 @@
     <ScrollView>
         <VerticalStackLayout>
         <HorizontalStackLayout HorizontalOptions="Center">
-                <Image x:Name="Dado1Imagem"
+                <Image x:Name="ImagemDado1"
                     Source="dado1.png" 
                     HeightRequest="150"
                     Aspect="AspectFit" />
-                    
-                <Image x:Name="Dado2Imagem"
+
+                <Image x:Name="ImagemDado2"
                     Source="dado1.png"
                     HeightRequest="150"
                     Aspect="AspectFit" />
