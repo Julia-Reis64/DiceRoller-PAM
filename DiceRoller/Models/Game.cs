@@ -17,7 +17,7 @@ namespace DiceRoller.Models
             VitoriaSequencia = 0;
             TotalVitorias = 0;
             UltimaSomaDosDados = 0;
-            LimiteVitorias = 0;
+            LimiteVitorias = 25;
         }
 
         public bool CheckResultado(int dado1, int dado2, int escolha)
@@ -37,20 +37,10 @@ namespace DiceRoller.Models
             }
         }
         //Adicionar um limite de vitórias (25 vitórias)
-        public bool LimiteCheck(Dice dice){
-            LimiteVitorias = 25;
-            if(TotalVitorias >= 25)
-            {
-                return true;
-                
-            }
-            else
-            {
-                return false;
-            }
+        public bool LimiteCheck()
+        {
+            return TotalVitorias >= LimiteVitorias;
         }
-
-        
 
     }
 }
